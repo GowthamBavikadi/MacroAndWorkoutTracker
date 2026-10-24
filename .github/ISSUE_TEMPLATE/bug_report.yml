@@ -1,0 +1,38 @@
+name: Bug Report
+description: Create a report to help us reproduce and fix a bug
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to report an issue.
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: What actions or steps led to this issue?
+      placeholder: |
+        1. Open the workout logging tab
+        2. Select 'Chest'
+        3. Attempt to save set
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Device and Android Version
+      placeholder: "e.g., Pixel 7 on Android 14 / Samsung Galaxy S23 on Android 13"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logcat or Stack Trace
+      description: Paste any relevant logcat output or error logs.
+      render: shell
